@@ -15,48 +15,60 @@ const client = [
 
 function Client() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="container mx-auto px-4 lg:px-14 py-4 lg:py-6 flex items-center">
-        <div className="w-full">
-          {/* 1st div */}
-          <div>
-            <h1 className="text-5xl text-white font-medium uppercase text-center mb-14">
-              Clients
-            </h1>
-          </div>
-          {/* 2nd div */}
-          <div className="mt-6 lg:mt-10 flex flex-col  justify-center">
-            <div className="flex justify-center w-full">
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-items-center mt-8 lg:mt-14 gap-4 sm:gap-6 lg:gap-x-8 lg:gap-y-10 max-w-4xl">
-                {client.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className="flex justify-center items-center p-3 sm:p-4 lg:p-2  hover:rounded-lg hover:shadow-2xl transition-all duration-300"
-                    initial={{ opacity: 0, scale: 0.85 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    whileHover={{
-                      scale: 1.08,
-                      boxShadow: "0 4px 24px rgba(0,0,0,0.12)",
-                    }}
-                  >
-                    <Image
-                      src={item.image}
-                      alt={`Client ${index + 1}`}
-                      width={120}
-                      height={60}
-                      className="object-contain h-12 sm:h-16 lg:h-14 xl:h-20 w-auto max-w-[100px] sm:max-w-[120px] lg:max-w-[120px] xl:max-w-[140px] max-h-[48px] sm:max-h-[64px] lg:max-h-[60px] xl:max-h-[80px] transition-all duration-300"
-                      priority
-                    />
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+    <section className="min-h-screen flex items-center justify-center bg- py-16 px-2">
+      <div className="w-full max-w-6xl mx-auto rounded-3xl  backdrop-blur-md p-8 md:p-16 flex flex-col items-center">
+        {/* Animated Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-4xl md:text-5xl font-extrabold uppercase text-center mb-14 tracking-wider text-white drop-shadow-lg"
+        >
+          <span className="bg-gradient-to-r from-lime-400 via-white to-lime-400 bg-clip-text text-transparent animate-pulse">
+            Clients
+          </span>
+        </motion.h1>
+        {/* Animated Grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.09,
+              },
+            },
+          }}
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 justify-items-center gap-6 md:gap-10 w-full"
+        >
+          {client.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.13, rotate: -2 }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.09,
+                ease: "easeOut",
+              }}
+              className="flex flex-col items-center justify-center bg-white/5 hover:bg-red-400/10 rounded-2xl shadow-lg hover:shadow-lime-400/30 p-5 md:p-7 transition-all duration-300 cursor-pointer group border border-white/10"
+            >
+              <Image
+                src={item.image}
+                alt={`Client ${index + 1}`}
+                width={120}
+                height={60}
+                className="object-contain h-12 sm:h-16 lg:h-14 xl:h-20 w-auto max-w-[100px] sm:max-w-[120px] lg:max-w-[120px] xl:max-w-[140px] max-h-[48px] sm:max-h-[64px] lg:max-h-[60px] xl:max-h-[80px] group-hover:scale-110 group-hover:drop-shadow-[0_2px_16px_lime] transition-all duration-300"
+                priority
+              />
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 
