@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaFacebook, FaInstagram, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function ContactSection() {
@@ -107,60 +107,60 @@ export default function ContactSection() {
       </div>
 
       {/* Bottom Section */}
-    <div className="w-full relative mt-10">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
-        {/* Contact Info */}
-        <div className="text-center md:text-left">
-        <h4 className="font-bold mb-1">Reach Us Anytime:</h4>
-        <p>📧 Email: contact@katanagames.org</p>
-        <p>📞 Phone: +92 300 0000 000</p>
+      <div className="w-full relative mt-10">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+          {/* Contact Info */}
+          <div className="text-center md:text-left">
+            <h4 className="font-bold mb-1">Reach Us Anytime:</h4>
+            <p>📧 Email: contact@katanagames.org</p>
+            <p>📞 Phone: +92 300 0000 000</p>
+          </div>
+
+          {/* Social Links */}
+          <div className="mt-4 md:mt-0 text-center md:text-right">
+            <h4 className="font-bold">
+              Follow <span className="text-white">Us</span> On:
+            </h4>
+            <div className="flex gap-3 justify-center md:justify-end mt-2">
+              <a href="#" className=" p-2 rounded">
+                <FaFacebook className="text-blue-600 text-2xl" />
+              </a>
+              <a href="#" className=" p-2 rounded">
+                <FaXTwitter className="text-2xl" />
+              </a>
+              <a href="#" className=" p-2 rounded">
+                <FaInstagram className="text-2xl text-fuchsia-500" />
+              </a>
+              <a href="#" className=" p-2 rounded">
+                <FaLinkedin className="text-2xl text-blue-700" />
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Social Links */}
-        <div className="mt-4 md:mt-0 text-center md:text-right">
-        <h4 className="font-bold">
-          Follow <span className="text-white">Us</span> On:
-        </h4>
-        <div className="flex gap-3 justify-center md:justify-end mt-2">
-          <a href="#" className=" p-2 rounded">
-            <FaFacebook className="text-blue-600 text-2xl" />
-          </a>
-          <a href="#" className=" p-2 rounded">
-            <FaXTwitter className="text-2xl" />
-          </a>
-          <a href="#" className=" p-2 rounded">
-            <FaInstagram className="text-2xl text-fuchsia-500" />
-          </a>
-          <a href="#" className=" p-2 rounded">
-            <FaLinkedin className="text-2xl text-blue-700" />
-          </a>
-        </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="bg-red-600 m-0 p-0">
-        <div
-        className="flex justify-center overflow-visible"
-        style={{ height: "30px", marginTop: "-1px" }}
-        >
-        <div
-          className="bg-red-700 text-white font-bold text-xl px-8 py-5 rounded-t-[60px]"
-          style={{
-            position: "absolute",
-            left: "50%",
-            transform: "translateX(-50%)",
-            marginTop: "-30px",
-            height: "auto",
-            zIndex: 10,
-            bottom: 0,
-          }}
-        >
-          Copyright 2023 KATANA GAMES. All Rights Reserved.
-        </div>
+        {/* Footer */}
+        <div className="bg-red-600 m-0 p-0">
+          <div
+            className="flex justify-center overflow-visible"
+            style={{ height: "30px", marginTop: "-1px" }}
+          >
+            <div
+              className="bg-red-600 text-white font-bold text-xl px-8 py-5 rounded-t-[60px]"
+              style={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                marginTop: "-30px",
+                height: "auto",
+                zIndex: 10,
+                bottom: 0,
+              }}
+            >
+              Copyright 2023 KATANA GAMES. All Rights Reserved.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
     </section>
   );
 }
