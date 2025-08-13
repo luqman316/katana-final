@@ -1,0 +1,116 @@
+.tech-section {
+  width: 100vw;
+  min-height: 100vh;
+  background: #0a0a0a url("/public/tech-bg.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-hashtag {
+  color: #ff6600;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.tech-title {
+  color: #fff;
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.tech-border-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-svg-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tech-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 60px;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.tech-item {
+  border: 1px solid #b6ff2e;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 140px;
+  min-height: 110px;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.tech-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.tech-item span {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+}
+
+@media (max-width: 900px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 18px 0;
+    padding: 0 2px;
+  }
+  .tech-item {
+    padding: 18px 10px;
+    min-width: 90px;
+    min-height: 70px;
+  }
+  .tech-title {
+    font-size: 1.5rem;
+  }
+}

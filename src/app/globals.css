@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #050505;
     --foreground: #ededed;
   }
 }
@@ -24,3 +24,56 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* boder for header */
+.header-border {
+  width: 100%;
+  height: 8px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.header-border-line {
+  border-top: 3px solid red;
+  width: 96%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header-border::before,
+.header-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 2%;
+  height: 3px;
+  background: red;
+  /* color: #c1f100; */
+}
+
+.header-border::before {
+  left: 0;
+  transform: skewX(-20deg);
+}
+
+.header-border::after {
+  right: 0;
+  transform: skewX(20deg);
+}
+
+
+/* about */
+/* .custom-border { */
+  /* position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #bfff00;
+  box-shadow: 0 0 15px #bfff00; */
+  
+  /* Cut center at top & bottom */
+  /* clip-path: polygon(
+    0% 0%, 40% 0%, 45% 10px, 55% 10px, 60% 0%, 100% 0%,
+    100% 100%, 60% 100%, 55% calc(100% - 10px), 45% calc(100% - 10px), 40% 100%, 0% 100%
+  ); */
+/* } */
