@@ -3,9 +3,9 @@ import { FaPlay } from "react-icons/fa";
 
 export default function AboutUs() {
   return (
-    <section className="container mx-auto px-14 py-6 flex flex-col items-center justify-center bg-yellow- bg-transparent text-white">
+    <section className="container mx-auto min-h-screen px-14  flex flex-col items-center justify-center bg-yellow- bg-transparent text-white">
       {/* Heading */}
-      <h2 className="text-center text-5xl font-bold mb-12 ">ABOUT US</h2>
+      <h2 className="text-center text-5xl  mb-12 font-medium ">ABOUT US</h2>
 
       {/* Border Wrapper */}
       <div className="relative w-full max-w-7xl mx-auto rounded-xl overflow-hidden">

@@ -4,13 +4,13 @@ function Hero() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-6 sm:px-8 md:px-14 py-4 ">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center ">
           {/* 1st div */}
           <div className="flex justify-center items-center">
-            <p className="text-lime-400"># World Class Gaming Starts Here</p>
+            <p className="text-lime-400 animate-bounce"># World Class Gaming Starts Here</p>
           </div>
           {/* 2nd div */}
-          <div className="mt-2 flex flex-col justify-center items-center gap-2">
+          <div className="mt-2 flex flex-col animate text-white justify-center items-center gap-2">
             <h1 className="text-6xl font-bold ">
               <span className="border-l-4 border-double border-t-4 border-b-4 pl-3  rounded-l-3xl border-s-4 border-amber-900">TURN</span>ING YOUR IMAGI
               <span className="border-r-4 border-double border-t-4 border-b-4 pr-3  rounded-r-3xl border-e-4 border-amber-900">NATION</span> <br />

@@ -3,11 +3,11 @@ import Image from "next/image";
 function Service() {
   return (
     <div>
-      <div className=" container mx-auto px-14 py-6">
+      <div className="text-white container mx-auto px-14 py-6 min-h-screen flex justify-center items-center">
         <div className="flex flex-col items-center  justify-center">
           {/* heading */}
           <div>
-            <h1 className="text-5xl uppercase text-center">OUr service</h1>
+            <h1 className="text-5xl uppercase font-medium text-white text-center">OUr service</h1>
           </div>
           {/* service */}
           <section className="mt-14">
@@ -22,7 +22,7 @@ function Service() {
                   className=""
                 />
                 <h2 className=" font-semibold mt-4 text-2xl">2D / 3D Art</h2>
-                <p className="text-gray-300 text-center">
+                <p className="text-white text-center">
                   Create profiles for professional esports players, including
                   their bios, achievements, and current teams.
                 </p>

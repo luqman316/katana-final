@@ -1,20 +1,27 @@
 import About from "@/components/About";
+import Client from "@/components/Client";
+import Games from "@/components/Games";
 import Hero from "@/components/Hero";
+import PageTransition from "@/components/PageTransition";
+import Reviews from "@/components/Reviews";
 import Service from "@/components/Service";
 import Technology from "@/components/Technology";
 
 function HomePage() {
   return (
     <>
-      <Hero />
-      <About />
-      <br />
-      <br />
-      <br />
-      <Service />
-      <Technology />
-      <br />
-      <div></div>
+      <div className="bg-black">
+        <PageTransition>
+          <Hero />
+          <About />
+          <Service />
+          <Technology />
+          <Games />
+          <Client />
+          <Reviews />
+          <div></div>
+        </PageTransition>
+      </div>
     </>
   );
 }
