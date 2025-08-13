@@ -66,7 +66,7 @@ function Reviews() {
                   key={index}
                   className="basis-full sm:basis-1/2 lg:basis-1/3 justify-center flex"
                 >
-                  <div className="bg-transparent   border shadow-lg border-s-fuchsia-600 shadow-fuchsia-900 border-e-fuchsia-600 border-t-fuchsia-600 border-b-fuchsia-600  p-4 sm:p-6 md:p-8 lg:p-14 rounded-xl text-center h-full flex flex-col justify-center min-h-[250px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[360px] w-full">
+                  <div className="bg-transparent   border shadow-lg border-s-red-600 shadow-red-900 border-e-red-600 border-t-red-600 border-b-red-600  p-4 sm:p-6 md:p-8 lg:p-14 rounded-xl text-center h-full flex flex-col justify-center min-h-[250px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[360px] w-full">
                     <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-red-600 mb-2 sm:mb-3 lg:mb-4">
                       {review.name}
                     </h1>

@@ -3,15 +3,17 @@ import { FaPlay } from "react-icons/fa";
 
 export default function AboutUs() {
   return (
-    <section className="container mx-auto min-h-screen px-14  flex flex-col items-center justify-center bg-yellow- bg-transparent text-white">
+    <section className="w-full min-h-screen flex flex-col items-center justify-center  py-12 px-2">
       {/* Heading */}
-      <h2 className="text-center text-5xl  mb-12 font-medium ">ABOUT US</h2>
+      <h2 className="text-center text-5xl mb-12 font-extrabold tracking-wider text-white drop-shadow-lg">
+        ABOUT US
+      </h2>
 
       {/* Border Wrapper */}
-      <div className="relative w-full max-w-7xl mx-auto rounded-xl overflow-hidden">
+      <div className="relative w-full max-w-7xl mx-auto rounded-3xl overflow-visible  shadow-2xl  backdrop-blur-md px-2 md:px-8 py-8">
         {/* SVG Border */}
         <svg
-          className="absolute inset-0 w-full h-full pointer-events-none"
+          className="absolute inset-0 w-full h-full pointer-events-none z-10"
           viewBox="0 0 1000 500"
           preserveAspectRatio="none"
         >
@@ -35,64 +37,72 @@ export default function AboutUs() {
             fill="transparent"
             stroke="#ccff00"
             strokeWidth="3"
+            filter="drop-shadow(0 0 8px #ccff00)"
           />
         </svg>
 
         {/* Content */}
-        <div className="relative flex flex-col md:flex-row items-center justify-center gap-6 px-2 py-8">
-          {/* Left Character */}
-          <div className=" flex-shrink-0">
+        <div className="relative flex flex-col md:flex-row  items-center justify-center gap-6 px-2 py-8 z-20">
+          {/* Left Character - overlap and pop out */}
+          <div className="md:block absolute -left-32   flex items-stretch z-30">
             <Image
-              src="/about/122.png"
+              src="/about/AxeCharacter.png"
               alt="Left Character"
-              width={350}
-              height={350}
-              className="object-contain"
+              width= {420} 
+              height={420}
+              className="object-contain   drop-shadow-[0_8px_32px_red]"
+              priority
             />
           </div>
 
           {/* Center Text */}
-          <div className="flex-1 max-w-xl flex flex-col items-center text-center">
-            <p className="mb-8 text-gray-300 leading-2xl">
+          <div className="flex-1 max-w-2xl flex flex-col items-center text-center  mx-auto z-40">
+            <p className="mb-8 text-gray-200 text-lg leading-8 font-medium">
               We’re a game development company dedicated to crafting immersive,
               unforgettable experiences that resonate with players worldwide.
               Our skilled developers, artists, and designers work hand in hand
               to transform your vision into reality. Every project we create is
               built with passion, precision, and a commitment to exceeding
-              expectations — delivering games that stand out and keep players
+              expectations delivering games that stand out and keep players
               coming back.
             </p>
 
             {/* Show Reel Button */}
-            <button className="flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500/10 to-yellow-400/10 px-6 py-3 rounded-full font-semibold">
-              <FaPlay className="text-yellow-500 text-xl" />
+            <button className="flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500/30 to-yellow-400/50 px-8 py-4 rounded-full font-bold text-white text-lg shadow-lg hover:scale-105 hover:from-yellow-400 hover:to-orange-500 transition-all duration-200">
+              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 shadow-md animate-pulse">
+                <FaPlay className="text-white text-2xl ml-1" />
+              </span>
               SHOW REEL
             </button>
           </div>
 
-          {/* Right Character */}
-          <div className="flex-shrink-0">
+          {/* Right Character - overlap and pop out */}
+          <div className=" md:block absolute -right-32  flex items-stretch z-30">
             <Image
               src="/about/Samurai.png"
               alt="Right Character"
-              height={360}
-              width={360}
-              className="object-contain"
+              width= {420}
+              height={420}
+              className="object-contain h-full min-h-0 drop-shadow-[0_8px_32px_red]"
+              priority
             />
           </div>
         </div>
       </div>
 
       {/* Bottom Features */}
-      <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-lg font-bold">
-        <div className="flex items-center gap-3 bg-black p-2 rounded-xl">
-          <span className="text-orange-500">✦</span> EPIC WORLDS
+      <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-6 text-lg font-bold">
+        <div className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30">
+          <span className="text-orange-500 text-2xl animate-pulse">✦</span> EPIC
+          WORLDS
         </div>
-        <div className="flex items-center gap-3 bg-black p-2 rounded-xl">
-          <span className="text-orange-500">✦</span> THRILLING ACTION
+        <div className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30">
+          <span className="text-orange-500 text-2xl animate-pulse">✦</span>{" "}
+          THRILLING ACTION
         </div>
-        <div className="flex items-center gap-3 bg-black p-2 rounded-xl">
-          <span className="text-orange-500">✦</span> CHALLENGING PUZZLES
+        <div className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30">
+          <span className="text-orange-500 text-2xl animate-pulse">✦</span>{" "}
+          CHALLENGING PUZZLES
         </div>
       </div>
     </section>
