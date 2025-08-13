@@ -143,33 +143,43 @@ function Technology() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black text-white">
-        
-        <motion.p
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="text-orange-500 text-center mb-2"
-        >
-          #BehindTheGameplay
-        </motion.p>
+    <div className="min-h-screen flex flex-col items-center justify-center   text-white">
+      {/* <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="text-orange-500 text-center bottom-0"
+      >
+        #BehindTheGameplay
+      </motion.p> */}
       <section
-        className="relative w-full h-[530px]  flex flex-col items-center justify-center bg-cover bg-center"
+        className="relative w-full h-[580px]  flex flex-col items-center justify-center bg-cover bg-center  "
         style={{ backgroundImage: "url('/tech/bg1.png')" }}
       >
-        <div className="w-full flex flex-col items-center justify-center bg-gradient-to-r from-black/70 via-black/40 to-transparent h-[530px] py-12">
+        <div className="w-full flex flex-col items-center justify-center bg-gradient-to-r from-black/70 via-black/40 to-transparent h-[580px] py-12">
           {/* Small hashtag animation */}
 
           <div className="mt-3 w-full flex flex-col items-center justify-center">
             <div className="w-full max-w-6xl flex flex-col items-center justify-center">
               {/* Title animation */}
+              <motion.p
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="text-md rounded-t-[60px] bg-[#050505] px-16 py-3 rounded-full font-medium backdrop-blur-sm text-center absolute left-1/2 -translate-x-1/2 top-0 mt-0"
+                style={{ marginTop: 0 }}
+                aria-hidden="true"
+              >
+                <span className="bg-gradient-to-r from-red-600 to-yellow-400 bg-clip-text text-transparent">#BehindTheGameplay</span>
+              </motion.p>
               <motion.span
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="text-white text-5xl px-4 py-1 rounded-full font-medium backdrop-blur-sm text-center"
+                className="text-white text-5xl  px-8 py-3 rounded-full font-medium backdrop-blur-sm text-center mt-24"
               >
                 TECHNOLOGIES
               </motion.span>

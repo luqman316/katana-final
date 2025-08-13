@@ -41,9 +41,9 @@ export default function AboutUs() {
         {/* Content */}
         <div className="relative flex flex-col md:flex-row items-center justify-center gap-6 px-2 py-8">
           {/* Left Character */}
-          <div className="flex-shrink-0">
+          <div className=" flex-shrink-0">
             <Image
-              src="/about/ch.png"
+              src="/about/122.png"
               alt="Left Character"
               width={350}
               height={350}
@@ -73,10 +73,10 @@ export default function AboutUs() {
           {/* Right Character */}
           <div className="flex-shrink-0">
             <Image
-              src="/about/ch.png"
+              src="/about/Samurai.png"
               alt="Right Character"
-              width={350}
-              height={350}
+              height={360}
+              width={360}
               className="object-contain"
             />
           </div>

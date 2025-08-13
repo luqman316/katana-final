@@ -48,6 +48,11 @@ function ProjectLayout1({
             {description} for more onClick
           </p>
         </div>
+      <span
+        className="absolute bottom-2 left-2 z-20 px-2 py-1  bg-lime-500 text-black rounded-full shadow-lg text-sm font-semibold transition-transform duration-200 group-hover:scale-110"
+      >
+        Click
+      </span>
       </div>
     </div>
   );

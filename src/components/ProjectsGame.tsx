@@ -91,7 +91,7 @@ function ProjectsGame({ limit }: ProjectsProps) {
       {/* More projects link */}
       <div className="mt-6 text-center ">
         <Link href="/games">
-          <button className="hover:cursor-pointer p-3 px-8 rounded-2xl bg-gradient-to-l bg-orange-500 from-yellow-600 text-xl text-gray-200">
+          <button className="bg-gradient-to-r from-red-800 to-yellow-400/40 px-8 py-2 text-black font-semibold rounded-full mt-2">
             view all
           </button>
         </Link>
