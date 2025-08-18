@@ -47,12 +47,12 @@ function Reviews() {
   ];
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen flex flex-col justify-center items-center">
+            <h1 className="text-5xl uppercase font-medium text-white text-center mb-14">TESTIMONIALS</h1>
       <div className="container mx-auto px-14 sm:px-4 lg:px-14 py-3 sm:py-4 lg:py-6 flex flex-col items-center justify-center">
         <div className="w-full">
           {/* Heading */}
           <div>
-            <h1 className="text-5xl uppercase font-medium text-white text-center mb-14">TESTIMONIALS</h1>
           </div>
 
           {/* Carousel */}
