@@ -6,8 +6,10 @@ function Games() {
       <div className="container mx-auto px-14 sm:px-6 lg:px-14 py-6 flex flex-col items-center justify-center">
         {/* Heading */}
         <div>
-            <h1 className="text-5xl font-medium uppercase text-center mb-14">Projects</h1>
-          </div>
+          <h2 className="text-center text-4xl sm:text-5xl mb-12 font-extrabold tracking-wider text-white drop-shadow-lg">
+            ABOUT US
+          </h2>
+        </div>
 
         {/* Projects Section */}
         <ProjectsGames />

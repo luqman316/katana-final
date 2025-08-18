@@ -14,13 +14,26 @@ function HomePage() {
       <div className="bg-[#050505]">
         <PageTransition>
           <Hero />
-          <About />
-          <Service />
-          <Technology />
-          <Games />
-          <Client />
-          <Reviews />
-          <ContactSection/>
+          <div id="about">
+            <About />
+          </div>
+          <div id="service">
+            <Service />
+          </div>
+          <div id="technologies">
+            <Technology />
+          </div>
+          <div>
+            <Games />
+          </div>
+          <div id="client">
+            <Client />
+          </div>
+          <div id="reviews">
+            <Reviews />
+          </div>
+
+          <ContactSection />
           <div></div>
         </PageTransition>
       </div>

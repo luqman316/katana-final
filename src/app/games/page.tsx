@@ -12,9 +12,9 @@ function WorkPage() {
       transition={{ duration: 0.5 }}
       className="container mx-auto px-14 sm:px-4 py-6 sm:py-8 mt-36 text-white"
     >
-      <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-4xl uppercase mb-2 font-extrabold  tracking-tight text-gray-100">
-        <span className="text-red-600 text-6xl">P</span>rojects
-      </h1>
+          <h2 className="text-center uppercase text-4xl sm:text-5xl mb-12 font-extrabold tracking-wider text-white drop-shadow-lg">
+       Projects
+      </h2>
       <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-4 sm:mt-8">
         {projects.map((project, index) => (
           <Link
