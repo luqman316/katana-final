@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Service() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg- py-8 px-2 w-full">
+    <div className="mt-10 flex items-center justify-center bg- py-8 px-2 w-full">
       <div className="text-white container mx-auto px-2 xs:px-4 sm:px-8 md:px-14 py-4 w-full">
         <div className="flex flex-col items-center justify-center w-full">
           {/* heading */}

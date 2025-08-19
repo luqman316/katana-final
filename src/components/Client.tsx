@@ -91,7 +91,7 @@ const client = [
 
 function Client() {
   return (
-    <section className="min-h-screen flex items-center justify-center py-10 px-4 sm:px-6 md:px-8 lg:px-2">
+    <section className=" flex items-center justify-center py-10 px-4 sm:px-6 md:px-8 lg:px-2">
       <div className="w-full max-w-6xl mx-auto rounded-3xl backdrop-blur-md p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-center">
         
         {/* Animated Heading */}
@@ -99,9 +99,9 @@ function Client() {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold uppercase text-center mb-10 sm:mb-12 md:mb-14 tracking-wider text-white drop-shadow-lg"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold uppercase text-center mb-10 sm:mb-12 md:mb-14 tracking-wider text-white drop-shadow-lg"
         >
-          <span className="bg-gradient-to-r from-lime-400 via-white to-lime-400 bg-clip-text text-transparent animate-pulse">
+          <span className="">
             Clients
           </span>
         </motion.h1>

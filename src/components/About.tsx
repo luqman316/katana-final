@@ -117,7 +117,7 @@ import { FaPlay } from "react-icons/fa";
 
 export default function AboutUs() {
   return (
-    <section className="w-full min-h-screen flex flex-col items-center justify-center py-12 px-2">
+    <section className="w-full  flex flex-col items-center justify-center py-12 px-2">
       {/* Heading */}
       <h2 className="text-center text-4xl sm:text-5xl mb-12 font-extrabold tracking-wider text-white drop-shadow-lg">
         ABOUT US

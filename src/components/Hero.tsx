@@ -1,9 +1,12 @@
+"use client";
+/* eslint-disable react/no-unescaped-entities */
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-
 function Hero() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg">
-      <div className="container mx-auto px-4 sm:px-8 md:px-14 py-4 w-full">
+    <div className="relative min-h-screen flex items-start justify-center sm:mt-28 md:mt-28 lg:mt-28 xl:mt-28 2xl:mt-28">
+      <div className="container relative z-10 mx-auto px-4 sm:px-8 md:px-14 py-4 w-full">
         <div className="flex flex-col justify-center items-center w-full">
           {/* 1st div */}
           <div className="flex justify-center items-center w-full">
@@ -25,19 +28,44 @@ function Hero() {
             <span className="font-bold text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
               INTO PLAYABLE WORLDS
             </span>
-            <p className="text-center mt-4 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-              We’ve built a strong reputation in mobile game development,
-              helping creators turn ideas into success stories. Our expertise
-              and platform give your project the boost it needs to win.
-            </p>
+            <div>
+              <p className="text-center mt-4 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+                We've built a strong reputation in Game Development and
+                Interactive Media Market helping creators turn Ideas into
+                Success Stories.
+              </p>
+              <div className="flex flex-col gap-3 items-start mt-10 w-full">
+                <p className="flex justify-center items-center font-bold gap-x-2">
+                  <span className="text-4xl">-</span>
+                  <span className="text-3xl"> NFT/Blockchain Games</span>
+                </p>
+                <p className="flex justify-center items-center font-bold gap-x-2">
+                  <span className="text-4xl">-</span>
+                  <span className="text-3xl"> Mobile/Web Games</span>
+                </p>
+                <p className="flex justify-center items-center font-bold gap-x-2">
+                  <span className="text-4xl">-</span>
+                  <span className="text-3xl"> PC/Console Games</span>
+                </p>
+                <p className="flex justify-center items-center font-bold gap-x-2">
+                  <span className="text-4xl">-</span>
+                  <span className="text-3xl">
+                    {" "}
+                    Metaverse/Augmented Reality/Virtual Reality
+                  </span>
+                </p>
+              </div>
+            </div>
           </div>
           {/* 3rd div */}
+
+          {/* 4th div */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 mt-8 w-full justify-center items-center">
             <Link
-              href={"/"}
+              href={"/games"}
               className="mt-4 sm:mt-6 uppercase text-black font-semibold px-6 sm:px-8 py-3 text-sm sm:text-base bg-lime-500 rounded-l-2xl rounded-r-2xl rounded-lg hover:bg-lime-700 transition-colors w-full sm:w-auto text-center"
             >
-              Explore More
+              Explore Games
             </Link>
             <Link
               href={"/"}
@@ -48,6 +76,40 @@ function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Decorative left character */}
+      <motion.div
+        initial={{ x: -80, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="hidden lg:block absolute left-0 top-0 h-full w-xl pointer-events-none z-0"
+      >
+        <Image
+          src="/hero/render1.png"
+          alt="left art"
+          fill
+          className="object-contain"
+          priority={false}
+        />
+      </motion.div>
+
+      {/* Decorative right character */}
+      <motion.div
+        initial={{ x: 80, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        className="hidden lg:block absolute right-0 top-0 h-full w-xl pointer-events-none z-0"
+      >
+        <Image
+          src="/hero/render23.png"
+          alt="right art"
+          fill
+          className="object-contain"
+          priority={false}
+        />
+      </motion.div>
     </div>
   );
 }

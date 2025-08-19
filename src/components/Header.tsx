@@ -11,22 +11,25 @@ function Header() {
     <>
       <div className="flex items-center">
         {/* header */}
-        <div className="border-b-2 border-b-red-700 bg-black fixed top-0 left-0 w-full z-50">
+        <div className="border-b-2 border-b-red-700 bg-black w-full md:fixed md:top-0 md:left-0 md:w-full md:z-50">
           <div className="container mx-auto px-6 sm:px-8 md:px-14 py-4 ">
             <div className="flex items-center justify-between ">
               {/* 1st div */}
               <div className="flex items-center justify-between w-full md:w-auto">
                 <Link href="/" className="flex items-center gap-2">
                   <Image
-                    src="/header/logo.jpg"
+                    src="/header/cropped.png"
                     alt="logo"
-                    width={50}
-                    height={50}
+                    width= {150}
+                    height={150}
                     className="rounded-full"
                   />
-                  <h1 className="text-2xl sm:text-3xl font-bold text-red-600/70">
+                  {/* <h1
+                    className="text-2xl sm:text-3xl font-bold text-white"
+                    style={{ WebkitTextStroke: "1px red" }}
+                  >
                     Katana Games
-                  </h1>
+                  </h1> */}
                 </Link>
 
                 {/* Mobile menu button */}
@@ -92,19 +95,13 @@ function Header() {
                   href="https://www.linkedin.com/company/katana-games/posts/?feedView=all"
                   className=""
                 >
-                    <FaLinkedinIn className="text-red-600 hover:text-blue-500 text-xl" />
+                  <FaLinkedinIn className="text-red-600 hover:text-blue-500 text-xl" />
                 </Link>
-                <Link
-                  href="/"
-                  className=""
-                >
-                    <FaGithubAlt className="text-red-600 hover:text-white text-xl" />
+                <Link href="/" className="">
+                  <FaGithubAlt className="text-red-600 hover:text-white text-xl" />
                 </Link>
-                <Link
-                  href="/"
-                  className=""
-                >
-                    <FaInstagram className="text-red-600 hover:text-fuchsia-700 text-xl" />
+                <Link href="/" className="">
+                  <FaInstagram className="text-red-600 hover:text-fuchsia-700 text-xl" />
                 </Link>
               </div>
             </div>
