@@ -81,14 +81,14 @@ function Technology() {
                     delay: index * 0.08,
                     ease: "easeOut",
                   }}
-                  className="border border-lime-600 p-3 w-auto flex justify-center items-center hover:bg-lime-500/10 transition-colors rounded-lg"
+                  className=" p-3 w-auto flex justify-center items-center hover:bg-white/10 transition-colors rounded-lg"
                 >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
-                    width={80}
-                    height={80}
-                    className="sm:w-[90px] sm:h-[90px] lg:w-[100px] lg:h-[100px]"
+                    width= {100}
+                    height={100}
+                    className=" sm:w-[90px] sm:h-[60px] lg:w-[120px] lg:h-[70px]"
                   />
                 </motion.div>
               ))}

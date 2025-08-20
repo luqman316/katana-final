@@ -34,7 +34,7 @@ function Hero() {
                 Interactive Media Market helping creators turn Ideas into
                 Success Stories.
               </p>
-              <div className="flex flex-col gap-3 items-start mt-10 w-full">
+              <div className="flex flex-col gap-3 items-start mt-24 w-full">
                 <p className="flex justify-center items-center font-bold gap-x-2">
                   <span className="text-4xl">-</span>
                   <span className="text-3xl"> NFT/Blockchain Games</span>
@@ -60,7 +60,7 @@ function Hero() {
           {/* 3rd div */}
 
           {/* 4th div */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 mt-8 w-full justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-10 mt-16 w-full justify-center items-center">
             <Link
               href={"/games"}
               className="mt-4 sm:mt-6 uppercase text-black font-semibold px-6 sm:px-8 py-3 text-sm sm:text-base bg-lime-500 rounded-l-2xl rounded-r-2xl rounded-lg hover:bg-lime-700 transition-colors w-full sm:w-auto text-center"
@@ -83,13 +83,13 @@ function Hero() {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="hidden lg:block absolute left-0 top-0 h-full w-xl pointer-events-none z-0"
+        className="hidden lg:block absolute animate-pulse left-0 bottom-28 h-full w-xl pointer-events-none z-0"
       >
         <Image
           src="/hero/render1.png"
           alt="left art"
           fill
-          className="object-contain"
+          className="object-contain object-bottom"
           priority={false}
         />
       </motion.div>
@@ -100,13 +100,13 @@ function Hero() {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="hidden lg:block absolute right-0 top-0 h-full w-xl pointer-events-none z-0"
+        className="hidden lg:block absolute right-0 bottom-28 h-full animate-pulse w-lg pointer-events-none z-0"
       >
         <Image
           src="/hero/render23.png"
           alt="right art"
           fill
-          className="object-contain"
+          className="object-contain object-bottom"
           priority={false}
         />
       </motion.div>

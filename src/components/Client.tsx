@@ -128,7 +128,7 @@ function Client() {
                 delay: index * 0.09,
                 ease: "easeOut",
               }}
-              className="flex flex-col items-center justify-center bg-white/5 hover:bg-red-400/10 rounded-2xl shadow-lg hover:shadow-lime-400/30 p-4 sm:p-5 md:p-6 lg:p-7 transition-all duration-300 cursor-pointer group border border-white/10"
+              className="flex flex-col items-center justify-center  hover:bg-red-400/10 rounded-2xl shadow-lg hover:shadow-red-400/30 p-4 sm:p-5 md:p-6 lg:p-7 transition-all duration-300 cursor-pointer group "
             >
               <Image
                 src={item.image}
@@ -137,7 +137,7 @@ function Client() {
                 height={60}
                 className="object-contain h-10 sm:h-14 md:h-16 lg:h-14 xl:h-20 w-auto 
                   max-w-[80px] sm:max-w-[110px] md:max-w-[120px] lg:max-w-[120px] xl:max-w-[140px]
-                  group-hover:scale-110 group-hover:drop-shadow-[0_2px_16px_lime] transition-all duration-300"
+                  group-hover:scale-110 group-hover:drop-shadow-[0_2px_16px_red] transition-all duration-300"
                 priority
               />
             </motion.div>
