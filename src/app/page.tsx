@@ -17,14 +17,14 @@ function HomePage() {
           <div id="about">
             <About />
           </div>
+          <div>
+            <Games />
+          </div>
           <div id="service">
             <Service />
           </div>
           <div id="technologies">
             <Technology />
-          </div>
-          <div>
-            <Games />
           </div>
           <div id="client">
             <Client />
