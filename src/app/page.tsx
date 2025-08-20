@@ -32,8 +32,9 @@ function HomePage() {
           <div id="reviews">
             <Reviews />
           </div>
-
-          <ContactSection />
+          <div id="contact">
+            <ContactSection />
+          </div>
           <div></div>
         </PageTransition>
       </div>

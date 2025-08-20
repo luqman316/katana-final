@@ -68,7 +68,7 @@ function Hero() {
               Explore Games
             </Link>
             <Link
-              href={"/"}
+              href={"#contact"}
               className="mt-0 sm:mt-6 uppercase text-black font-semibold px-6 sm:px-8 py-3 text-sm sm:text-base bg-lime-500 rounded-l-2xl rounded-r-2xl rounded-lg hover:bg-lime-700 transition-colors w-full sm:w-auto text-center"
             >
               Get in touch
