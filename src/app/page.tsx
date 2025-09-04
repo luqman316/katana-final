@@ -11,7 +11,7 @@ import Technology from "@/components/Technology";
 function HomePage() {
   return (
     <>
-      <div className="bg-[#050505]">
+      <div className="bg-[#050505] overflow-x-hidden">
         <PageTransition>
           <Hero />
           <div id="about">

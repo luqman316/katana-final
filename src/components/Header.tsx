@@ -75,6 +75,7 @@ function Header() {
                       { href: "#technologies", label: "Technologies" },
                       { href: "#client", label: "Clients" },
                       { href: "#reviews", label: "Reviews" },
+                      { href: "#contact", label: "Contact" },
                     ].map((item, index) => (
                       <li className="relative" key={index}>
                         <Link
