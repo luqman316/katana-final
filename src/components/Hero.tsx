@@ -34,7 +34,7 @@ function Hero() {
                 Interactive Media Market helping creators turn Ideas into
                 Success Stories.
               </p>
-              <div className="flex flex-col gap-3 items-start mt-24 w-full">
+              <div className=" flex flex-col gap-3 items-start mt-24 w-full">
                 <p className="flex justify-center items-center font-bold gap-x-2">
                   <span className="text-4xl">-</span>
                   <span className="text-3xl"> NFT/Blockchain Games</span>
@@ -83,7 +83,7 @@ function Hero() {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="hidden lg:block absolute animate-pulse left-0 bottom-28 h-full w-[500px] pointer-events-none z-0"
+        className="hidden lg:block absolute animate-pulse left-0 bottom-28 h-full w-[512px] pointer-events-none z-0"
       >
         <Image
           src="/hero/render1.png"
