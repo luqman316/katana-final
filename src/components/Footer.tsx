@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <div className="  relative  mt-20">
+      <div className="  relative  x">
         <div className=" bg-red-600 m-0 p-0">
           <div
             className="flex justify-center overflow-visible"

@@ -51,7 +51,7 @@ export default function AboutUs() {
               alt="Left Character"
               width={420}
               height={420}
-              className="object-contain drop-shadow-[0_4px_15px_red]"
+              className="object-contain drop-shadow-[0_4px_6px_red]"
               priority
             />
           </div>
@@ -63,7 +63,7 @@ export default function AboutUs() {
               alt="Left Character"
               width={260}
               height={260}
-              className="object-contain drop-shadow-[0_4px_15px_red]"
+              className="object-contain drop-shadow-[0_4px_6px_red]"
               priority
             />
           </div>
@@ -96,7 +96,7 @@ export default function AboutUs() {
               alt="Right Character"
               width={420}
               height={420}
-              className="object-contain drop-shadow-[0_4px_15px_red]"
+              className="object-contain drop-shadow-[0_4px_6px_red]"
               priority
             />
           </div>
@@ -108,7 +108,7 @@ export default function AboutUs() {
               alt="Right Character"
               width={260}
               height={260}
-              className="object-contain drop-shadow-[0_4px_15px_red]"
+              className="object-contain drop-shadow-[0_4px_6px_red]"
               priority
             />
           </div>
