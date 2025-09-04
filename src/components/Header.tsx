@@ -20,7 +20,7 @@ function Header() {
                   <Image
                     src="/header/cropped.png"
                     alt="logo"
-                    width= {150}
+                    width={150}
                     height={150}
                     className="rounded-full"
                   />
@@ -114,6 +114,18 @@ function Header() {
                   className="block w-full text-center bg-black text-white py-2 rounded-lg font-semibold hover:underline hover:text-blue-500"
                 >
                   <FaLinkedinIn />
+                </Link>
+                <Link
+                  href="/"
+                  className="block w-full text-center bg-black text-white py-2 rounded-lg font-semibold hover:underline hover:text-blue-500"
+                >
+                  <FaGithubAlt />
+                </Link>
+                <Link
+                  href="/"
+                  className="block w-full text-center bg-black text-white py-2 rounded-lg font-semibold hover:underline hover:text-blue-500"
+                >
+                  <FaInstagram />
                 </Link>
               </div>
             )}

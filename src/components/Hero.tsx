@@ -83,7 +83,7 @@ function Hero() {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="hidden lg:block absolute animate-pulse left-0 bottom-28 h-full w-xl pointer-events-none z-0"
+        className="hidden lg:block absolute animate-pulse left-0 bottom-28 h-full w-[500px] pointer-events-none z-0"
       >
         <Image
           src="/hero/render1.png"
@@ -100,7 +100,7 @@ function Hero() {
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
-        className="hidden lg:block absolute right-0 bottom-28 h-full animate-pulse w-lg pointer-events-none z-0"
+        className="hidden lg:block absolute right-0 bottom-28 h-full animate-pulse w-[500px] pointer-events-none z-0"
       >
         <Image
           src="/hero/render23.png"
