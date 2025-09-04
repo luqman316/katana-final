@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
 
@@ -115,26 +116,73 @@ export default function AboutUs() {
         </div>
       </div>
 
-      {/* Bottom Features */}
-      <div className="mt-10 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm sm:text-lg font-bold px-2">
-        <div className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30">
-          <span className="text-orange-500 text-xl sm:text-2xl animate-pulse">
-            ✦
-          </span>{" "}
-          EPIC WORLDS
+      {/* Bottom Features - Infinite Horizontal Loop */}
+      <div className=" mt-10 w-full overflow-x-hidden flex items-center justify-center px-2">
+        <div
+          className="flex bg-black items-center gap-6 sm:gap-8 text-sm sm:text-lg font-bold animate-feature-loop"
+          style={{
+            minWidth: "max-content",
+            animation: "featureLoop 16s linear infinite",
+          }}
+        >
+          {/* Repeat features for seamless loop */}
+          {Array.from({ length: 2 })
+            .flatMap((_, repeatIdx) => [
+              { label: "EPIC WORLDS", key: `epic-${repeatIdx}` },
+              { label: "THRILLING ACTION", key: `thrill-${repeatIdx}` },
+              { label: "CHALLENGING PUZZLES", key: `puzzle-${repeatIdx}` },
+            ])
+            .map((feature) => (
+              <div
+                key={feature.key}
+                className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30"
+              >
+                <span className="text-orange-500 text-xl sm:text-2xl animate-pulse">
+                  ✦
+                </span>{" "}
+                {feature.label}
+              </div>
+            ))}
+          {[...Array(4)].map((_, repeatIdx) => [
+            <div
+              key={`epic-${repeatIdx}`}
+              className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30"
+            >
+              <span className="text-orange-500 text-xl sm:text-2xl animate-pulse">
+                ✦
+              </span>{" "}
+              EPIC WORLDS
+            </div>,
+            <div
+              key={`thrill-${repeatIdx}`}
+              className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30"
+            >
+              <span className="text-orange-500 text-xl sm:text-2xl animate-pulse">
+                ✦
+              </span>{" "}
+              THRILLING ACTION
+            </div>,
+            <div
+              key={`puzzle-${repeatIdx}`}
+              className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30"
+            >
+              <span className="text-orange-500 text-xl sm:text-2xl animate-pulse">
+                ✦
+              </span>{" "}
+              CHALLENGING PUZZLES
+            </div>,
+          ])}
         </div>
-        <div className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30">
-          <span className="text-orange-500 text-xl sm:text-2xl animate-pulse">
-            ✦
-          </span>{" "}
-          THRILLING ACTION
-        </div>
-        <div className="flex items-center gap-3 bg-black/80 p-3 rounded-xl shadow-md border border-lime-400/30">
-          <span className="text-orange-500 text-xl sm:text-2xl animate-pulse">
-            ✦
-          </span>{" "}
-          CHALLENGING PUZZLES
-        </div>
+        <style jsx>{`
+          @keyframes featureLoop {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(50%);
+            }
+          }
+        `}</style>
       </div>
     </section>
   );
