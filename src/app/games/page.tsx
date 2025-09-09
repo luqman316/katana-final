@@ -10,7 +10,7 @@ function WorkPage() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-14 sm:px-4 py-6 sm:py-8 mt-36 text-white mb-38`"
+      className="container mx-auto px-14 sm:px-4 py-6 sm:py-8 mt-36 text-white "
     >
           <h2 className="text-center uppercase text-4xl sm:text-5xl mb-12 font-extrabold tracking-wider text-white drop-shadow-lg">
        Projects

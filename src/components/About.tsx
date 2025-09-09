@@ -126,7 +126,7 @@ export default function AboutUs() {
           }}
         >
           {/* Repeat features for seamless loop */}
-          {Array.from({ length: 2 })
+          {Array.from({ length: 4 })
             .flatMap((_, repeatIdx) => [
               { label: "EPIC WORLDS", key: `epic-${repeatIdx}` },
               { label: "THRILLING ACTION", key: `thrill-${repeatIdx}` },

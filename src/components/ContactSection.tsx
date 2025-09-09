@@ -1,8 +1,8 @@
 "use client";
+import emailjs from "emailjs-com";
 import { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import emailjs from "emailjs-com";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -29,12 +29,18 @@ export default function ContactSection() {
         "service_0rj788j", // replace with your EmailJS service ID
         "template_b5drnwa", // replace with your EmailJS template ID
         formData,
-        "6I9-dBNIRVoCX0HbB"  // replace with your EmailJS public key
+        "6I9-dBNIRVoCX0HbB" // replace with your EmailJS public key
       )
       .then(
         () => {
           setStatus("✅ Message Sent Successfully!");
-          setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
         },
         (error) => {
           setStatus("❌ Failed to send. Try again!");
@@ -173,7 +179,27 @@ export default function ContactSection() {
         </div>
 
         {/* Footer */}
-       
+        <div className=" bg-red-600 m-0 p-0">
+          <div
+            className="flex justify-center overflow-visible"
+            style={{ height: "30px", marginTop: "-1px" }}
+          >
+            <div
+              className="bg-red-600 text-white font-bold text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px]"
+              style={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                marginTop: "-30px",
+                height: "auto",
+                zIndex: 10,
+                bottom: 0,
+              }}
+            >
+              Copyright 2023 KATANA GAMES. All Rights Reserved.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
