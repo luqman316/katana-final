@@ -15,7 +15,7 @@ function EditProject() {
   const [description, setDescription] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:3001/api/projects/${params.id}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects/${params.id}`)
       .then((res) => res.json())
       .then((data) => {
         setProject(data);
@@ -37,7 +37,9 @@ function EditProject() {
 
   return (
     <div className="container mx-auto px-4 py-8 text-white mt-30 bg-gray-800 rounded-lg shadow-lg">
-      <h2 className="text-3xl font-extrabold mb-6 text-center text-blue-400">Edit Project</h2>
+      <h2 className="text-3xl font-extrabold mb-6 text-center text-blue-400">
+        Edit Project
+      </h2>
       <div className="mb-6">
         <label className="block mb-2 text-lg font-medium">Title</label>
         <input

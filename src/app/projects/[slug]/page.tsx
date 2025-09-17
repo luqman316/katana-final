@@ -32,7 +32,7 @@ export default function ProjectPage() {
       setLoading(true);
       try {
         // Fetch all projects from API
-        const res = await fetch("http://localhost:3001/api/projects");
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`);
         const data = await res.json();
         // Find project by slug or id
         const found = data.find(

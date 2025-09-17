@@ -65,7 +65,7 @@ export default function ProjectUpload() {
     try {
       setLoading(true);
       setMessage(null);
-      const res = await fetch("http://localhost:3001/api/projects", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`, {
         method: "POST",
         body: formData,
       });
