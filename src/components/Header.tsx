@@ -104,8 +104,11 @@ function Header() {
                 <Link href="/" className="">
                   <FaInstagram className="text-red-600 hover:text-fuchsia-700 text-xl" />
                 </Link> */}
+
                 <Link
                   href="/signIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-red-700 px-4 py-2 rounded-lg font-semibold hover:underline hover:text-black"
                 >
                   SingIn
