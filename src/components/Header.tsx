@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaGithubAlt, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -125,7 +124,7 @@ function Header() {
             {/* Contact button on mobile */}
             {isOpen && (
               <div className="mt-4 md:hidden">
-                <Link
+                {/* <Link
                   href="/"
                   className="block w-full text-center bg-black text-white py-2 rounded-lg font-semibold hover:underline hover:text-blue-500"
                 >
@@ -142,6 +141,14 @@ function Header() {
                   className="block w-full text-center bg-black text-white py-2 rounded-lg font-semibold hover:underline hover:text-blue-500"
                 >
                   <FaInstagram />
+                </Link> */}
+                <Link
+                  href="/signIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-red-700 px-4 py-2 rounded-lg font-semibold hover:underline hover:text-black"
+                >
+                  SingIn
                 </Link>
               </div>
             )}
