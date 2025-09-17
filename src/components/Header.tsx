@@ -92,7 +92,7 @@ function Header() {
 
               {/* 2nd div - Contact Button */}
               <div className="hidden md:flex bg-black h-10 gap-3 items-center justify-center text-white font-bold rounded-lg">
-                <Link
+                {/* <Link
                   href="https://www.linkedin.com/company/katana-games/posts/?feedView=all"
                   className=""
                 >
@@ -103,7 +103,19 @@ function Header() {
                 </Link>
                 <Link href="/" className="">
                   <FaInstagram className="text-red-600 hover:text-fuchsia-700 text-xl" />
+                </Link> */}
+                <Link
+                  href="/signIn"
+                  className="bg-red-700 px-4 py-2 rounded-lg font-semibold hover:underline hover:text-black"
+                >
+                  SingIn
                 </Link>
+                {/* <Link
+                  href="/"
+                  className="bg-red-700 px-4 py-2 rounded-lg font-semibold hover:underline hover:text-black"
+                >
+                  SignUp
+                </Link> */}
               </div>
             </div>
 

@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { projects } from "@/data/projects";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 import ProjectLayout1 from "./ProjectLayout";
 import { ProjectGridSkeleton } from "./ProjectSkeleton";
 
@@ -21,18 +21,25 @@ type ProjectsProps = {
 
 function ProjectsGame({ limit }: ProjectsProps) {
   const [isLoading, setIsLoading] = useState(true);
-  const projectList = limit ? projects.slice(0, limit) : projects;
+  interface Project {
+    _id: string;
+    title: string;
+    description: string;
+    images: string | { url: string }[] | { url: string } | null;
+  }
 
+  const [projectList, setProjectList] = useState<Project[]>([]);
   const autoplayPlugin = Autoplay({ delay: 4000 });
 
   useEffect(() => {
-    // Simulate loading time for better UX
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
+    // fetch("http://localhost:3001/api/projects")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/projects`)
+      .then((res) => res.json())
+      .then((data) => {
+        setProjectList(limit ? data.slice(0, limit) : data);
+        setIsLoading(false);
+      });
+  }, [limit]);
 
   if (isLoading) {
     return (
@@ -51,25 +58,55 @@ function ProjectsGame({ limit }: ProjectsProps) {
     >
       <Carousel plugins={[autoplayPlugin]} className="relative w-full">
         <CarouselContent className="flex gap-2">
-          {projectList.map((project, index) => (
-            <CarouselItem
-              key={project.slug}
-              className="basis-full min-[480px]:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
-            >
-              <Link href={`/projects/${project.slug}`}>
-                <ProjectLayout1
-                  image={
-                    Array.isArray(project.image)
-                      ? project.image[0]
-                      : project.image
-                  }
-                  title={project.title}
-                  description={project.description}
-                  direction={index % 2 === 0 ? "left" : "right"}
-                />
-              </Link>
-            </CarouselItem>
-          ))}
+          {projectList.map((project, index) => {
+            let imageUrl = undefined;
+            if (Array.isArray(project.images)) {
+              if (
+                project.images[0] &&
+                typeof project.images[0] === "object" &&
+                project.images[0].url
+              ) {
+                imageUrl = project.images[0].url;
+              } else if (typeof project.images[0] === "string") {
+                imageUrl = project.images[0];
+              }
+            } else if (
+              typeof project.images === "object" &&
+              project.images !== null &&
+              "url" in project.images
+            ) {
+              imageUrl = project.images.url;
+            } else if (typeof project.images === "string") {
+              imageUrl = project.images;
+            }
+            return (
+              <CarouselItem
+                key={project._id}
+                className="basis-full min-[480px]:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+              >
+                <Link href={`/projects/${project._id}`}>
+                  <div className="flex flex-col items-center gap-2">
+                    {imageUrl && (
+                      <Image
+                        src={imageUrl}
+                        alt={project.title}
+                        width={400}
+                        height={160}
+                        className="rounded-md object-cover hidden"
+                        unoptimized
+                      />
+                    )}
+                    <ProjectLayout1
+                      image={imageUrl || ""}
+                      title={project.title}
+                      description={project.description}
+                      direction={index % 2 === 0 ? "left" : "right"}
+                    />
+                  </div>
+                </Link>
+              </CarouselItem>
+            );
+          })}
         </CarouselContent>
 
         {/* Navigation Buttons */}
